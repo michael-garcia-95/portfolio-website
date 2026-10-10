@@ -56,7 +56,7 @@ export default function Footer() {
                 href="https://github.com/michael-garcia-95"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-background/75 transition-colors hover:text-background"
+                className="rounded-md text-sm text-background/75 transition-colors hover:text-background focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-background"
               >
                 GitHub ↗
               </a>
@@ -65,7 +65,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/michael-garcia-aa658615b"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-background/75 transition-colors hover:text-background"
+                className="rounded-md text-sm text-background/75 transition-colors hover:text-background focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-background"
               >
                 LinkedIn ↗
               </a>
