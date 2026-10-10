@@ -1,52 +1,62 @@
+
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import { contact } from "@/data/contact";
 
 export default function ContactCTA() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-32 lg:py-40"
+      aria-labelledby="contact-title"
+      className="scroll-mt-28 border-t border-border py-24 sm:py-28 lg:py-32"
     >
       <Container>
-        <div className="relative overflow-hidden rounded-3xl bg-accent px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-          {/* Decorative element */}
-          <div
-            aria-hidden="true"
-            className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-background/10"
-          />
-
-          <div
-            aria-hidden="true"
-            className="absolute -right-8 -top-8 h-40 w-40 rounded-full border border-background/10"
-          />
-
-          <div className="relative max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-background/60">
-              Have a project in mind?
+        <div className="rounded-2xl bg-surface px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-20">
+          <div className="max-w-3xl">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+              04 / Get in Touch
             </p>
 
-            <h2 className="mt-6 font-sans text-4xl font-semibold leading-[0.95] tracking-[-0.045em] text-background sm:text-5xl lg:text-7xl">
-              Let&apos;s make something great.
+            <h2
+              id="contact-title"
+              className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+            >
+              Let&apos;s build something worthwhile.
             </h2>
 
-            <p className="mt-8 max-w-xl text-base leading-7 text-background/65 sm:text-lg sm:leading-8">
-              Whether you&apos;re starting from scratch or your current website
-              needs a refresh, I&apos;d love to hear what you&apos;re working on.
+            <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              Whether you&apos;re looking for a developer
+              to join your team, interested in collaborating,
+              or have a project in mind, I&apos;d be happy
+              to hear from you.
             </p>
 
-            <Link
-              href="/contact"
-              className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-background px-6 py-3.5 text-sm font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-background/90"
-            >
-              Start a conversation
+            <div className="mt-9 flex flex-wrap gap-3">
+              {contact.publicEmail ? (
+                <a
+                  href={`mailto:${contact.publicEmail}`}
+                  className="inline-flex min-h-12 items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  Send an email →
+                </a>
+              ) : (
+                <a
+                  href={contact.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  Connect on LinkedIn ↗
+                </a>
+              )}
 
-              <span
-                aria-hidden="true"
-                className="transition-transform duration-300 group-hover:translate-x-1"
+              <Link
+                href="/contact"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
-                →
-              </span>
-            </Link>
+                Contact details →
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

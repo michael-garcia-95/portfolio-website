@@ -1,61 +1,116 @@
-import Container from "@/components/ui/Container";
-import ContactForm from "@/components/contact/ContactForm";
 
-export const metadata = {
-  title: "Contact — Michael Garcia",
+import type { Metadata } from "next";
+import Container from "@/components/ui/Container";
+import { contact } from "@/data/contact";
+
+export const metadata: Metadata = {
+  title: "Contact Michael Garcia | Software Developer",
   description:
-    "Have a project in mind? Get in touch with Michael Garcia about your next website.",
+    "Connect with Michael Garcia about software development opportunities, technical collaboration, or freelance projects.",
 };
+
+const linkClass =
+  "group flex min-h-44 flex-col justify-between rounded-2xl border border-border bg-white p-6 transition-colors hover:border-accent/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-8";
 
 export default function ContactPage() {
   return (
     <main>
-      <section className="pb-20 pt-32 sm:pb-24 sm:pt-40 md:pb-32 md:pt-48 lg:pb-40">
+      <section className="pb-24 pt-40 sm:pb-32 sm:pt-48">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:gap-24">
-            {/* Intro */}
-            <div>
-              <p className="mb-6 text-sm font-medium uppercase tracking-[0.16em] text-muted">
-                Get in Touch
-              </p>
+          <div className="max-w-3xl">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+              Get in Touch
+            </p>
 
-              <h1 className="max-w-4xl font-sans text-[3.25rem] font-semibold leading-[0.9] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-7xl">
-                Let&apos;s talk about your project.
-              </h1>
+            <h1 className="mt-6 text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
+              Let&apos;s connect.
+            </h1>
 
-              <p className="mt-8 max-w-md text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                Have a new website in mind, or think your current one could be
-                better? Tell me a little about what you&apos;re working on.
-              </p>
+            <p className="mt-7 max-w-2xl text-base leading-8 text-muted sm:text-lg">
+              I&apos;m interested in conversations about
+              software development opportunities,
+              technical challenges, and potential
+              collaborations.
+            </p>
 
-              <div className="mt-12 space-y-6">
+            <p className="mt-4 text-base leading-8 text-muted">
+              You can reach me through the channels below.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {contact.publicEmail && (
+              <a
+                href={`mailto:${contact.publicEmail}`}
+                className={linkClass}
+              >
                 <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
+                  <p className="font-mono text-xs uppercase tracking-wider text-accent">
                     Email
                   </p>
 
-                  <a
-                    href="mailto:hello@example.com"
-                    className="mt-2 inline-block text-sm font-medium text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-foreground"
-                  >
-                    hello@example.com
-                  </a>
+                  <h2 className="mt-4 break-words text-xl font-semibold text-foreground">
+                    {contact.publicEmail}
+                  </h2>
                 </div>
 
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.14em] text-muted">
-                    Based in
-                  </p>
+                <p className="mt-6 text-sm text-muted">
+                  Send an email →
+                </p>
+              </a>
+            )}
 
-                  <p className="mt-2 text-sm font-medium text-foreground">
-                    Trinidad & Tobago
-                  </p>
-                </div>
+            <a
+              href={contact.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClass}
+            >
+              <div>
+                <p className="font-mono text-xs uppercase tracking-wider text-accent">
+                  Professional Network
+                </p>
+
+                <h2 className="mt-4 text-2xl font-semibold text-foreground">
+                  LinkedIn
+                </h2>
               </div>
-            </div>
 
-            {/* Form */}
-            <ContactForm />
+              <p className="mt-6 text-sm text-muted">
+                View my profile ↗
+              </p>
+            </a>
+
+            <a
+              href={contact.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={linkClass}
+            >
+              <div>
+                <p className="font-mono text-xs uppercase tracking-wider text-accent">
+                  Code & Open Source
+                </p>
+
+                <h2 className="mt-4 text-2xl font-semibold text-foreground">
+                  GitHub
+                </h2>
+              </div>
+
+              <p className="mt-6 text-sm text-muted">
+                Explore my repositories ↗
+              </p>
+            </a>
+          </div>
+
+          <div className="mt-16 border-t border-border pt-8">
+            <p className="font-mono text-xs uppercase tracking-wider text-accent">
+              Location
+            </p>
+
+            <p className="mt-3 text-base font-medium text-foreground">
+              Trinidad &amp; Tobago
+            </p>
           </div>
         </Container>
       </section>
