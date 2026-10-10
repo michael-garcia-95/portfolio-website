@@ -1,219 +1,234 @@
+
+import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 
-export const metadata = {
-  title: "About — Michael Garcia",
+export const metadata: Metadata = {
+  title: "About Michael Garcia | Full-Stack Software Developer",
   description:
-    "Learn more about Michael Garcia, a web designer and developer focused on building thoughtful digital experiences.",
+    "Learn about Michael Garcia, an independent full-stack developer based in Trinidad & Tobago, building web applications and open-source developer tools.",
 };
 
-const tools = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "JavaScript",
-  "Git",
+const principles = [
+  {
+    number: "01",
+    title: "Understand the problem",
+    description:
+      "Good software starts with understanding what needs to be solved. I try to make technical decisions based on the problem rather than the technology alone.",
+  },
+  {
+    number: "02",
+    title: "Build thoughtfully",
+    description:
+      "I value clear interfaces, maintainable code, and practical architecture. I aim for solutions that work well today and can continue evolving.",
+  },
+  {
+    number: "03",
+    title: "Keep improving",
+    description:
+      "Every project offers opportunities to learn. Testing, iteration, and revisiting earlier decisions are important parts of how I develop software.",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <main>
-      {/* Intro */}
-      <section className="pb-24 pt-40 md:pb-32 md:pt-48 lg:pb-40">
+      {/* Introduction */}
+      <section className="pb-20 pt-40 sm:pb-28 sm:pt-48">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
-            <div>
-              <p className="mb-6 text-sm font-medium uppercase tracking-[0.16em] text-muted">
-                About Me
-              </p>
-
-              <h1 className="max-w-5xl font-sans text-[3.25rem] font-semibold leading-[0.9] tracking-[-0.055em] text-foreground sm:text-6xl lg:text-8xl">
-                I&apos;m Michael.
-                <br />
-                I build things
-                <br />
-                <span className="text-muted">for the web.</span>
-              </h1>
-            </div>
-
-            <div className="flex items-end">
-              <p className="max-w-lg text-base leading-7 text-muted sm:text-lg sm:leading-8">
-                I&apos;m a web developer who enjoys combining thoughtful design
-                with modern technology to create websites that are useful,
-                approachable, and built to last.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Personal introduction */}
-      <section className="border-y border-border">
-        <Container>
-          <div className="grid gap-12 py-20 md:py-28 lg:grid-cols-[1fr_2fr] lg:gap-20 lg:py-32">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.16em] text-muted">
-                A little more
-              </p>
-            </div>
-
-            <div className="max-w-3xl space-y-6 text-lg leading-8 text-foreground/75 sm:text-xl sm:leading-9">
-              <p>
-                I got into web development because I enjoy the process of
-                turning an idea into something people can actually interact
-                with.
-              </p>
-
-              <p>
-                There&apos;s something satisfying about taking a blank screen,
-                figuring out what needs to be there, and gradually turning it
-                into something that feels simple and intuitive.
-              </p>
-
-              <p>
-                These days, I focus on helping businesses create a stronger
-                presence online through modern, well-designed websites.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Philosophy */}
-      <section className="bg-foreground py-24 text-background md:py-32 lg:py-40">
-        <Container>
-          <div className="grid gap-12 lg:grid-cols-[1fr_2fr] lg:gap-20">
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-background/50">
-              How I Work
+          <div className="max-w-4xl">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+              About Me
             </p>
 
+            <h1 className="mt-6 text-5xl font-semibold leading-[1.08] tracking-[-0.05em] text-foreground sm:text-6xl lg:text-7xl">
+              I&apos;m Michael.
+              <br />
+              I build software
+              <br />
+              <span className="text-accent">
+                for the web.
+              </span>
+            </h1>
+
+            <p className="mt-8 max-w-2xl text-lg leading-9 text-muted sm:text-xl">
+              I&apos;m an independent full-stack software
+              developer based in Trinidad &amp; Tobago,
+              with a passion for building useful applications
+              and thoughtful developer tools.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Development background */}
+      <section className="border-y border-border py-20 sm:py-28">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20">
             <div>
-              <h2 className="max-w-4xl font-sans text-4xl font-semibold leading-[1] tracking-[-0.045em] sm:text-5xl lg:text-6xl">
-                Good websites don&apos;t need to be complicated.
+              <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+                01 / My Background
+              </p>
+
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                Learning by building.
               </h2>
-
-              <div className="mt-10 grid gap-8 sm:grid-cols-2">
-                <div>
-                  <p className="text-sm font-medium text-background">
-                    Design with purpose
-                  </p>
-
-                  <p className="mt-3 text-sm leading-6 text-background/55">
-                    Every layout, interaction, and piece of content should
-                    have a reason for being there.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium text-background">
-                    Build for people
-                  </p>
-
-                  <p className="mt-3 text-sm leading-6 text-background/55">
-                    A website should be easy to understand, navigate, and use
-                    regardless of who is visiting it.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium text-background">
-                    Sweat the details
-                  </p>
-
-                  <p className="mt-3 text-sm leading-6 text-background/55">
-                    Typography, spacing, responsiveness, and small interactions
-                    can make a surprisingly big difference.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium text-background">
-                    Keep it maintainable
-                  </p>
-
-                  <p className="mt-3 text-sm leading-6 text-background/55">
-                    Clean code and a sensible structure make a website easier
-                    to improve long after launch.
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
-        </Container>
-      </section>
 
-      {/* Tools */}
-      <section className="py-24 md:py-32 lg:py-40">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-20">
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-muted">
-              Tools I Use
-            </p>
-
-            <div>
-              <h2 className="max-w-3xl font-sans text-3xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-4xl lg:text-5xl">
-                Modern tools for modern websites.
-              </h2>
-
-              <div className="mt-10 grid grid-cols-2 border-t border-border sm:grid-cols-3">
-                {tools.map((tool) => (
-                  <div
-                    key={tool}
-                    className="border-b border-border py-5 text-sm font-medium text-foreground"
-                  >
-                    {tool}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Location */}
-      <section className="border-t border-border py-20 md:py-28">
-        <Container>
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm font-medium uppercase tracking-[0.16em] text-muted">
-                Based in
+            <div className="max-w-3xl space-y-6 text-base leading-8 text-muted sm:text-lg sm:leading-9">
+              <p>
+                My path into software development has been
+                largely self-directed. For more than eight
+                years, I&apos;ve been building websites and
+                applications independently, primarily using
+                JavaScript and PHP.
               </p>
 
-              <p className="mt-2 font-sans text-2xl font-semibold tracking-[-0.03em] text-foreground">
-                Trinidad & Tobago
+              <p>
+                Over time, my interests expanded beyond
+                individual websites into larger applications,
+                backend systems, and software architecture.
+                More recently, I&apos;ve focused on modern
+                React and Next.js development, alongside
+                TypeScript and reusable component design.
+              </p>
+
+              <p>
+                Working independently has given me experience
+                across different parts of the development
+                process, from planning and implementation
+                to debugging, testing, and maintenance.
+                It&apos;s also taught me to approach unfamiliar
+                problems with patience and curiosity.
               </p>
             </div>
-
-            <p className="max-w-md text-sm leading-6 text-muted sm:text-right">
-              Working with businesses locally and wherever a good project
-              takes me.
-            </p>
           </div>
         </Container>
       </section>
 
-      {/* CTA */}
-      <section className="pb-24 md:pb-32 lg:pb-40">
+      {/* Engineering approach */}
+      <section className="bg-surface/50 py-20 sm:py-28">
         <Container>
-          <div className="rounded-3xl bg-accent px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-background/60">
-              Have a project in mind?
+          <div className="max-w-2xl">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+              02 / How I Work
             </p>
 
-            <h2 className="mt-6 max-w-3xl font-display text-4xl font-semibold leading-[0.95] tracking-[-0.045em] text-background sm:text-5xl lg:text-6xl">
-              Let&apos;s build something together.
+            <h2 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              Practical thinking. Thoughtful execution.
             </h2>
+
+            <p className="mt-6 text-base leading-8 text-muted">
+              I believe effective software development
+              balances technical decisions with the needs
+              of the people using the product.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {principles.map((principle) => (
+              <article
+                key={principle.number}
+                className="rounded-2xl border border-border bg-white p-6 sm:p-8"
+              >
+                <span className="font-mono text-xs font-medium text-accent">
+                  {principle.number}
+                </span>
+
+                <h3 className="mt-8 text-xl font-semibold tracking-tight text-foreground">
+                  {principle.title}
+                </h3>
+
+                <p className="mt-4 text-sm leading-7 text-muted">
+                  {principle.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Current work */}
+      <section className="border-t border-border py-20 sm:py-28">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.5fr] lg:gap-20">
+            <div>
+              <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+                03 / What I Build
+              </p>
+
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                From applications to developer tools.
+              </h2>
+            </div>
+
+            <div>
+              <div className="max-w-3xl space-y-6 text-base leading-8 text-muted sm:text-lg">
+                <p>
+                  My projects reflect different areas of
+                  software development. Roundza explores
+                  interactive multiplayer experiences,
+                  while TTMotorSales represents practical
+                  business-oriented application development.
+                </p>
+
+                <p>
+                  I&apos;m also developing React Simple Charts,
+                  an open-source charting library that lets
+                  me explore component architecture,
+                  TypeScript API design, accessibility,
+                  and library development.
+                </p>
+
+                <p>
+                  I&apos;m interested in opportunities to
+                  contribute to teams building useful web
+                  products, where I can apply my experience,
+                  collaborate with other developers, and
+                  continue growing professionally.
+                </p>
+              </div>
+
+              <Link
+                href="/work"
+                className="group mt-8 inline-flex min-h-11 items-center gap-3 text-sm font-semibold text-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              >
+                Explore my projects
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Closing */}
+      <section className="border-t border-border pb-28 pt-20">
+        <Container>
+          <div className="rounded-2xl bg-foreground px-6 py-12 text-background sm:px-10 sm:py-16">
+            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-[#76D5C6]">
+              Let&apos;s Connect
+            </p>
+
+            <h2 className="mt-5 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
+              Interested in working together?
+            </h2>
+
+            <p className="mt-5 max-w-xl text-base leading-8 text-background/75">
+              I&apos;m always interested in conversations
+              about software development, new opportunities,
+              and interesting technical challenges.
+            </p>
 
             <Link
               href="/#contact"
-              className="group mt-10 inline-flex items-center gap-3 rounded-xl bg-background px-6 py-3.5 text-sm font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5"
+              className="mt-8 inline-flex min-h-12 items-center rounded-xl bg-background px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-surface focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-background"
             >
-              Start a conversation
-
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
+              Get in touch →
             </Link>
           </div>
         </Container>
