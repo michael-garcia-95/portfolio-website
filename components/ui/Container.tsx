@@ -1,5 +1,8 @@
+
+import type { ReactNode } from "react";
+
 interface ContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
@@ -9,7 +12,7 @@ export default function Container({
 }: ContainerProps) {
   return (
     <div
-      className={`mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 ${className}`}
+      className={`mx-auto w-full max-w-[1120px] px-5 sm:px-7 lg:px-8 ${className}`}
     >
       {children}
     </div>
