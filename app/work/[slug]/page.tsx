@@ -1,4 +1,4 @@
-
+import { createPageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -28,10 +28,10 @@ export async function generateMetadata({
     return { title: "Project Not Found" };
   }
 
-  return {
-    title: `${project.title} | Michael Garcia`,
-    description: project.description,
-  };
+  return createPageMetadata(
+    `${project.title} | Michael Garcia`,
+    project.description
+  );
 }
 
 export default async function ProjectPage({

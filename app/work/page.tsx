@@ -1,14 +1,13 @@
-
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Container from "@/components/ui/Container";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { projects } from "@/data/projects";
 
-export const metadata: Metadata = {
-  title: "Selected Work | Michael Garcia",
-  description:
-    "Explore software projects, full-stack applications, and open-source developer tools built by Michael Garcia.",
-};
+export const metadata = createPageMetadata(
+  "Selected Work | Michael Garcia",
+  "Explore software projects by Michael Garcia, including Roundza, TTMotorSales, and React Simple Charts."
+);
+
 
 export default function WorkPage() {
   return (

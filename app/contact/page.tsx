@@ -1,12 +1,11 @@
-
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Container from "@/components/ui/Container";
 import { contact } from "@/data/contact";
 
-export const metadata: Metadata = {
-  title: "Contact Michael Garcia | Software Developer",
-  description: "Get in touch with Michael Garcia about developer roles, projects, or questions about his work.",
-};
+export const metadata = createPageMetadata(
+  "About Michael Garcia | Full-Stack Software Developer",
+  "Learn about Michael Garcia, an independent software developer based in Trinidad & Tobago with over eight years of experience building websites and applications."
+);
 
 const linkClass =
   "group flex min-h-44 flex-col justify-between rounded-2xl border border-border bg-white p-6 transition-colors hover:border-accent/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent sm:p-8";

@@ -1,13 +1,12 @@
-
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 
-export const metadata: Metadata = {
-  title: "About Michael Garcia | Full-Stack Software Developer",
-  description:
-    "Learn about Michael Garcia, an independent full-stack developer based in Trinidad & Tobago, building web applications and open-source developer tools.",
-};
+export const metadata = createPageMetadata(
+  "About Michael Garcia | Full-Stack Software Developer",
+  "Learn about Michael Garcia, an independent software developer based in Trinidad & Tobago with over eight years of experience building websites and applications."
+);
+
 
 const principles = [
   {
