@@ -110,11 +110,11 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-2xl">
             <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
-              02 / How I approach a project.
+              02 / How I Work
             </p>
 
             <h2 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-              Practical thinking. Thoughtful execution.
+              How I approach a project.
             </h2>
 
             <p className="mt-6 text-base leading-8 text-muted">

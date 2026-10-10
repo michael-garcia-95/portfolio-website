@@ -5,8 +5,7 @@ import { contact } from "@/data/contact";
 
 export const metadata: Metadata = {
   title: "Contact Michael Garcia | Software Developer",
-  description:
-    "Connect with Michael Garcia about software development opportunities, technical collaboration, or freelance projects.",
+  description: "Get in touch with Michael Garcia about developer roles, projects, or questions about his work.",
 };
 
 const linkClass =
@@ -18,23 +17,17 @@ export default function ContactPage() {
       <section className="pb-24 pt-40 sm:pb-32 sm:pt-48">
         <Container>
           <div className="max-w-3xl">
-            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+            <h1 className="text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
               Get in Touch
-            </p>
-
-            <h1 className="mt-6 text-5xl font-semibold leading-tight tracking-tight text-foreground sm:text-6xl">
-              Let&apos;s connect.
             </h1>
-
             <p className="mt-7 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-              I&apos;m interested in conversations about
-              software development opportunities,
-              technical challenges, and potential
-              collaborations.
+              If you&apos;d like to talk about a job opportunity,
+              a project, or something I&apos;ve built, the easiest
+              way to reach me is through LinkedIn.
             </p>
 
             <p className="mt-4 text-base leading-8 text-muted">
-              You can reach me through the channels below.
+              You can also find my code and projects on GitHub.
             </p>
           </div>
 
@@ -68,7 +61,7 @@ export default function ContactPage() {
             >
               <div>
                 <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                  Professional Network
+                  Contact
                 </p>
 
                 <h2 className="mt-4 text-2xl font-semibold text-foreground">
@@ -89,7 +82,7 @@ export default function ContactPage() {
             >
               <div>
                 <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                  Code & Open Source
+                  My Code
                 </p>
 
                 <h2 className="mt-4 text-2xl font-semibold text-foreground">

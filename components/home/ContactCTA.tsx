@@ -21,14 +21,13 @@ export default function ContactCTA() {
               id="contact-title"
               className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl"
             >
-              Let&apos;s build something worthwhile.
+              Want to Talk?
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-              Whether you&apos;re looking for a developer
-              to join your team, interested in collaborating,
-              or have a project in mind, I&apos;d be happy
-              to hear from you.
+              If you&apos;re hiring a developer, have a question about
+              my work, or want to discuss a project, feel free
+              to get in touch.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
