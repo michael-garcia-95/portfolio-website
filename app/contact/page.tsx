@@ -3,8 +3,8 @@ import Container from "@/components/ui/Container";
 import { contact } from "@/data/contact";
 
 export const metadata = createPageMetadata(
-  "About Michael Garcia | Full-Stack Software Developer",
-  "Learn about Michael Garcia, an independent software developer based in Trinidad & Tobago with over eight years of experience building websites and applications."
+  "Contact Michael Garcia | Software Developer",
+  "Get in touch with Michael Garcia about developer roles, projects, or questions about his work."
 );
 
 const linkClass =
