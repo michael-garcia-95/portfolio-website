@@ -37,7 +37,7 @@ export default function ProjectCover({
     >
       {project.image ? (
         <Image
-          src={project.image}
+          src={`/portfolio-website${project.image}`}
           alt={`${project.title} project screenshot`}
           fill
           sizes="(max-width: 768px) 100vw, 1100px"
