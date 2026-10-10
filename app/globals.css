@@ -1,26 +1,35 @@
+
 @import "tailwindcss";
 
 :root {
-  --background: #f7f6f2;
-  --foreground: #171717;
+  color-scheme: light;
 
-  --muted: #737373;
-  --border: #deddd8;
+  --background: #f8f9f7;
+  --foreground: #16242d;
+  --surface: #e8f0ec;
 
-  --accent: #1f5c4a;
+  --muted: #596970;
+  --border: #dce5df;
+
+  --accent: #0e6e68;
   --accent-foreground: #ffffff;
+
+  --warmth: #cf7055;
 }
 
 @theme inline {
-  --font-sans: var(--font-plus-jakarta);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-geist-sans);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
   --color-muted: var(--muted);
   --color-border: var(--border);
-
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-warmth: var(--warmth);
 }
 
 html {
@@ -30,13 +39,13 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-plus-jakarta), sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--accent);
+  color: var(--accent-foreground);
 }
 
 @keyframes page-enter {

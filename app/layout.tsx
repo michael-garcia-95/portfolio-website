@@ -1,19 +1,27 @@
+
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Michael Garcia — Web Designer & Developer",
+  title: "Michael Garcia | Full-Stack Software Developer",
   description:
-    "Michael Garcia is a web designer and developer creating thoughtful, modern websites for businesses and people.",
+    "Independent full-stack developer building modern applications and tools for the web with React, TypeScript, Next.js, PHP, and Laravel.",
 };
 
 export default function RootLayout({
@@ -23,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakarta.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <Navbar />
         <div className="page-enter">{children}</div>
         <Footer />
