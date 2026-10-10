@@ -4,9 +4,9 @@ import Container from "@/components/ui/Container";
 const expertise = [
   {
     number: "01",
-    title: "Frontend Development",
+    title: "Frontend",
     description:
-      "Building responsive, accessible, and interactive interfaces with modern JavaScript frameworks and component-based architecture.",
+      "I build the parts of an application that people see and use, from page layouts to buttons, forms, and interactions.",
     technologies: [
       "JavaScript",
       "TypeScript",
@@ -17,9 +17,9 @@ const expertise = [
   },
   {
     number: "02",
-    title: "Backend Development",
+    title: "Backend",
     description:
-      "Developing application logic, APIs, authentication flows, and server-side functionality that support real-world applications.",
+      "I work on the code behind applications, including APIs, user accounts, and the logic that makes everything work.",
     technologies: [
       "PHP",
       "Laravel",
@@ -31,7 +31,7 @@ const expertise = [
     number: "03",
     title: "Databases & Services",
     description:
-      "Working with relational databases, data models, and backend services to build connected, data-driven applications.",
+      "I use databases and backend services to store information and keep different parts of an application connected.",
     technologies: [
       "PostgreSQL",
       "MySQL",
@@ -40,9 +40,9 @@ const expertise = [
   },
   {
     number: "04",
-    title: "Software Engineering",
+    title: "Testing & Development",
     description:
-      "Approaching development with an emphasis on maintainability, testing, accessibility, and thoughtful technical decisions.",
+      "I use Git to manage changes, write tests to catch problems, and try to keep my code easy to understand and maintain.",
     technologies: [
       "Git",
       "GitHub",
@@ -52,6 +52,7 @@ const expertise = [
     ],
   },
 ];
+
 
 export default function TechnicalExpertise() {
   return (
@@ -70,13 +71,13 @@ export default function TechnicalExpertise() {
             id="expertise-title"
             className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl"
           >
-            The tools behind my work.
+            What I work with.
           </h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-            From responsive interfaces to backend systems, I work
-            across the stack to turn ideas into functional,
-            maintainable software.
+            I work on both the parts people see and the systems
+            behind them. These are some of the tools I use
+            across my projects.
           </p>
         </div>
 
