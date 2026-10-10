@@ -44,71 +44,55 @@ export default async function ProjectPage({
     notFound();
   }
 
-  const sections = [
-    {
-      title: "The Challenge",
-      content: project.challenge,
-    },
-    {
-      title: "Technical Approach",
-      content: project.approach,
-    },
-    {
-      title: "Current State",
-      content: project.outcome,
-    },
-  ];
-
   return (
     <main>
-      <section className="pb-14 pt-40 sm:pt-48">
+      <section className="pb-12 pt-40 sm:pt-48">
         <Container>
           <Link
             href="/work"
             className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-foreground"
           >
-            <span aria-hidden="true">←</span>
-            Back to work
+            ← Back to work
           </Link>
 
           <div className="mt-12 max-w-4xl">
-            <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+            <p className="text-sm font-medium text-accent">
               {project.category}
             </p>
 
-            <h1 className="mt-5 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="mt-4 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               {project.title}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-lg leading-9 text-muted">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">
               {project.description}
             </p>
           </div>
         </Container>
       </section>
 
-      <section className="pb-16">
+      <section className="pb-12">
         <Container>
           <ProjectCover
             project={project}
-            className="aspect-[16/8] min-h-64 rounded-2xl"
+            className="aspect-[16/9] min-h-56 rounded-2xl"
           />
 
           <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-muted">
-                My Role
+              <p className="text-xs font-medium text-muted">
+                My role
               </p>
-              <p className="mt-2 font-medium text-foreground">
+              <p className="mt-2 text-sm font-medium text-foreground">
                 {project.role}
               </p>
             </div>
 
             <div>
-              <p className="text-xs font-medium uppercase tracking-wider text-muted">
-                Project Status
+              <p className="text-xs font-medium text-muted">
+                Status
               </p>
-              <p className="mt-2 font-medium text-foreground">
+              <p className="mt-2 text-sm font-medium text-foreground">
                 {project.status}
               </p>
             </div>
@@ -118,7 +102,7 @@ export default async function ProjectPage({
             {project.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-md bg-surface px-3 py-2 text-sm text-foreground"
+                className="rounded-md bg-surface px-3 py-2 text-xs font-medium text-foreground"
               >
                 {technology}
               </span>
@@ -132,9 +116,9 @@ export default async function ProjectPage({
                   href={project.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-foreground"
+                  className="inline-flex min-h-11 items-center rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:bg-foreground"
                 >
-                  View Source Code ↗
+                  View code ↗
                 </a>
               )}
 
@@ -143,9 +127,9 @@ export default async function ProjectPage({
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
+                  className="inline-flex min-h-11 items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
                 >
-                  Visit Website ↗
+                  Visit website ↗
                 </a>
               )}
             </div>
@@ -153,34 +137,59 @@ export default async function ProjectPage({
         </Container>
       </section>
 
-      {sections.map((section, index) => (
-        <section
-          key={section.title}
-          className={`border-t border-border py-16 sm:py-20 ${
-            index % 2 === 1 ? "bg-surface/50" : ""
-          }`}
-        >
-          <Container>
-            <div className="grid gap-6 lg:grid-cols-[1fr_2fr] lg:gap-16">
-              <h2 className="text-sm font-semibold text-accent">
-                {section.title}
+      <section className="border-t border-border py-16 sm:py-20">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                About the project
               </h2>
 
-              <p className="max-w-3xl text-lg leading-9 text-foreground">
-                {section.content}
-              </p>
+              <div className="mt-6 max-w-2xl space-y-5">
+                {project.story.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-base leading-8 text-muted"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
-          </Container>
-        </section>
-      ))}
 
-      <section className="border-t border-border py-20">
+            <div>
+              <h2 className="text-xl font-semibold tracking-tight text-foreground">
+                Some of the work
+              </h2>
+
+              <ul className="mt-6 list-disc space-y-3 pl-5 marker:text-accent">
+                {project.highlights.map((highlight) => (
+                  <li
+                    key={highlight}
+                    className="pl-1 text-sm leading-7 text-muted"
+                  >
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-14 max-w-3xl border-t border-border pt-8">
+            <p className="text-base leading-8 text-muted">
+              {project.note}
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-border py-16">
         <Container>
           <Link
             href="/work"
             className="text-sm font-semibold text-accent hover:text-foreground"
           >
-            ← Explore more work
+            ← See more projects
           </Link>
         </Container>
       </section>
