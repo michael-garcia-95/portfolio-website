@@ -1,14 +1,18 @@
+
 export type Project = {
   id: string;
   title: string;
   category: string;
   description: string;
-  image: string;
   href: string;
+  status: string;
+  role: string;
   technologies: string[];
-  year: string;
-  client: string;
-  featured?: boolean;
+  featured: boolean;
+  cover: "charts" | "games" | "marketplace";
+  image?: string;
+  sourceUrl?: string;
+  liveUrl?: string;
   challenge: string;
   approach: string;
   outcome: string;
@@ -16,59 +20,69 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "omoda-jaecoo",
-    title: "OMODA & JAECOO",
-    category: "Automotive",
+    id: "react-simple-charts",
+    title: "React Simple Charts",
+    category: "Open-source library",
     description:
-      "A modern digital experience designed to showcase OMODA & JAECOO vehicles through bold visuals and a refined user experience.",
-    image: "/images/projects/omoda-jaecoo.webp",
-    href: "/work/omoda-jaecoo",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
-    year: "2026",
-    client: "Concept Project",
+      "A lightweight, customizable React charting library built with TypeScript, with a focus on approachable APIs and accessible data visualization.",
+    href: "/work/react-simple-charts",
+    status: "Preparing 1.0",
+    role: "Creator & maintainer",
+    technologies: ["React", "TypeScript", "SVG", "Vitest"],
     featured: true,
+    cover: "charts",
+    sourceUrl:
+      "https://github.com/michael-garcia-95/react-simple-charts",
     challenge:
-      "Create a premium digital experience for an automotive brand that feels modern, sophisticated, and visually distinctive while making its vehicle lineup easy to explore.",
+      "Make common React charting needs easier to implement while maintaining a useful balance of customization, accessibility, and developer experience.",
     approach:
-      "The design focused on strong typography, immersive vehicle imagery, clear information hierarchy, and a streamlined browsing experience. The interface was built to feel premium without becoming difficult to navigate.",
+      "Designed typed component APIs, SVG-based chart rendering, shared chart infrastructure, and automated tests. The library currently includes line, area, bar, pie, and donut charts.",
     outcome:
-      "A polished automotive website concept that gives the brand a stronger digital presence and creates a clear path from discovering a vehicle to learning more about it.",
+      "Five chart components are implemented with an integration playground and supporting documentation. The first 1.0 release is being prepared.",
   },
   {
-    id: "darren-car-sales",
-    title: "Darren Car Sales",
-    category: "Automotive",
+    id: "roundza",
+    title: "Roundza",
+    category: "Multiplayer web application",
     description:
-      "A clean and approachable automotive website focused on presenting inventory clearly and making it easy for customers to get in touch.",
-    image: "/images/projects/darren-car-sales.webp",
-    href: "/work/darren-car-sales",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
-    year: "2026",
-    client: "Concept Project",
+      "A multiplayer party-game platform featuring interactive social games designed for groups playing together.",
+    href: "/work/roundza",
+    status: "In development",
+    role: "Independent developer",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+    ],
     featured: true,
+    cover: "games",
+    liveUrl: "https://playroundza.com",
     challenge:
-      "Design a straightforward automotive experience that allows customers to browse available vehicles while presenting the dealership in a more professional digital environment.",
+      "Build an accessible multiplayer party-game experience that groups can enjoy across their own devices.",
     approach:
-      "The interface prioritizes vehicle imagery, straightforward navigation, inventory browsing, and prominent contact actions. The design balances personality with the practicality expected from an automotive website.",
+      "Developed the application using Next.js and Supabase, including game sessions, multiplayer lobby functionality, authentication, and backend game rules.",
     outcome:
-      "A modern dealership experience designed to make browsing inventory simple while giving the business a stronger and more credible online presence.",
+      "A playable web version is available, with continued work toward the first full production release.",
   },
   {
-    id: "printing-works",
-    title: "Trinidad & Tobago Printing Works",
-    category: "Business",
+    id: "ttmotorsales",
+    title: "TTMotorSales",
+    category: "Vehicle classifieds platform",
     description:
-      "A sophisticated web presence designed to give an established printing business a more modern digital identity.",
-    image: "/images/projects/printing-works.webp",
-    href: "/work/printing-works",
-    technologies: ["Next.js", "React", "Tailwind CSS"],
-    year: "2026",
-    client: "Concept Project",
+      "A used-vehicle classifieds website helping people in Trinidad & Tobago find vehicles or advertise their own for sale.",
+    href: "/work/ttmotorsales",
+    status: "Live website",
+    role: "Full-stack development & maintenance",
+    technologies: ["PHP", "Laravel", "MySQL"],
+    featured: true,
+    cover: "marketplace",
+    liveUrl: "https://ttmotorsales.com",
     challenge:
-      "Create a more contemporary digital presence for an established business while maintaining the trust and professionalism associated with the company.",
+      "Make it easier for vehicle buyers and sellers in Trinidad & Tobago to connect through a dedicated online classifieds platform.",
     approach:
-      "The visual direction combines refined typography, a restrained color palette, and structured content to create a premium but approachable experience.",
+      "Worked on PHP-based application functionality, database-backed listings, and administrative workflows. A Laravel modernization is also underway.",
     outcome:
-      "A refreshed digital direction that positions the business more confidently online.",
+      "The public classifieds website remains available while further development and modernization continue.",
   },
 ];

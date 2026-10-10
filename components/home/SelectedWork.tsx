@@ -1,62 +1,57 @@
+
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import ProjectCard from "@/components/ui/ProjectCard";
 import { projects } from "@/data/projects";
 
 export default function SelectedWork() {
-  const featuredProjects = projects.filter((project) => project.featured);
+  const featuredProjects = projects.filter(
+    (project) => project.featured
+  );
 
   return (
-    <section id="work" className="py-24 sm:py-28 lg:py-40">
+    <section
+      id="work"
+      aria-labelledby="selected-work-title"
+      className="scroll-mt-28 border-t border-border py-24 sm:py-28 lg:py-32"
+    >
       <Container>
-        {/* Header */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-muted">
-              Selected Work
-            </p>
+        <div className="max-w-2xl">
+          <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+            01 / Selected Work
+          </p>
 
-            <h2 className="mt-4 max-w-2xl font-sans text-4xl font-semibold leading-[1] tracking-[-0.045em] text-foreground sm:text-5xl lg:text-6xl">
-              A few things I&apos;ve built.
-            </h2>
-          </div>
-
-          <Link
-            href="/work"
-            className="group inline-flex w-fit items-center gap-3 text-sm font-medium text-foreground"
+          <h2
+            id="selected-work-title"
+            className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl"
           >
-            View all work
+            Things I&apos;ve built.
+          </h2>
 
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </Link>
+          <p className="mt-5 text-base leading-8 text-muted">
+            A selection of applications and developer tools
+            I&apos;ve designed and developed.
+          </p>
         </div>
 
-        {/* Featured projects */}
-        <div className="mt-14 grid gap-12 sm:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-20">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {featuredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
-              index={index}
-              featured
+              prominent={index === 0}
             />
           ))}
         </div>
 
-        {/* Footer link */}
-        <div className="mt-16 flex justify-center md:mt-24">
-        <Link
-        href="/work"
-        className="group inline-flex items-center gap-3 text-sm font-medium text-foreground"
-        >
-          View all work
-
-          <span className="transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </Link>
+        <div className="mt-10">
+          <Link
+            href="/work"
+            className="inline-flex items-center gap-2 rounded-md text-sm font-semibold text-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            Explore all projects
+            <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </Container>
     </section>
