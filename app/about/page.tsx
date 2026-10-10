@@ -12,23 +12,24 @@ export const metadata: Metadata = {
 const principles = [
   {
     number: "01",
-    title: "Understand the problem",
+    title: "Planning",
     description:
-      "Good software starts with understanding what needs to be solved. I try to make technical decisions based on the problem rather than the technology alone.",
+      "I like to get a clear idea of what a project needs to do before getting too far into the code.",
   },
   {
     number: "02",
-    title: "Build thoughtfully",
+    title: "Building",
     description:
-      "I value clear interfaces, maintainable code, and practical architecture. I aim for solutions that work well today and can continue evolving.",
+      "I try to keep things straightforward and write code that's easy to understand and change later.",
   },
   {
     number: "03",
-    title: "Keep improving",
+    title: "Testing and improving",
     description:
-      "Every project offers opportunities to learn. Testing, iteration, and revisiting earlier decisions are important parts of how I develop software.",
+      "Not everything works perfectly the first time. I test things, fix problems, and make improvements as I go.",
   },
 ];
+
 
 export default function AboutPage() {
   return (
@@ -50,13 +51,14 @@ export default function AboutPage() {
                 for the web.
               </span>
             </h1>
-
+            
             <p className="mt-8 max-w-2xl text-lg leading-9 text-muted sm:text-xl">
-              I&apos;m an independent full-stack software
-              developer based in Trinidad &amp; Tobago,
-              with a passion for building useful applications
-              and thoughtful developer tools.
+              I&apos;m a software developer based in Trinidad &amp;
+              Tobago. Most of my experience has come from working
+              on my own projects, from websites to more involved
+              applications.
             </p>
+
           </div>
         </Container>
       </section>
@@ -71,36 +73,33 @@ export default function AboutPage() {
               </p>
 
               <h2 className="mt-5 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                Learning by building.
+                How I got into development.
               </h2>
             </div>
 
             <div className="max-w-3xl space-y-6 text-base leading-8 text-muted sm:text-lg sm:leading-9">
+
               <p>
-                My path into software development has been
-                largely self-directed. For more than eight
-                years, I&apos;ve been building websites and
-                applications independently, primarily using
-                JavaScript and PHP.
+                I&apos;ve been building websites and applications independently
+                for more than eight years. I started mainly with JavaScript
+                and PHP and learned a lot by making things myself.
               </p>
 
               <p>
-                Over time, my interests expanded beyond
-                individual websites into larger applications,
-                backend systems, and software architecture.
-                More recently, I&apos;ve focused on modern
-                React and Next.js development, alongside
-                TypeScript and reusable component design.
+                Over time, I started working on more involved projects.
+                More recently, I&apos;ve been using React, Next.js, and
+                TypeScript, alongside the backend work I was already
+                familiar with.
               </p>
 
               <p>
-                Working independently has given me experience
-                across different parts of the development
-                process, from planning and implementation
-                to debugging, testing, and maintenance.
-                It&apos;s also taught me to approach unfamiliar
-                problems with patience and curiosity.
+                One thing I enjoy about development is that there&apos;s
+                always something new to figure out. Sometimes that means
+                building a feature from scratch. Other times it means
+                tracking down a problem or finding a simpler way
+                to do something.
               </p>
+
             </div>
           </div>
         </Container>
@@ -111,7 +110,7 @@ export default function AboutPage() {
         <Container>
           <div className="max-w-2xl">
             <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
-              02 / How I Work
+              02 / How I approach a project.
             </p>
 
             <h2 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
@@ -119,10 +118,10 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-6 text-base leading-8 text-muted">
-              I believe effective software development
-              balances technical decisions with the needs
-              of the people using the product.
+              Every project is a little different, but I generally
+              try to keep the process simple.
             </p>
+
           </div>
 
           <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -158,35 +157,28 @@ export default function AboutPage() {
               </p>
 
               <h2 className="mt-5 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                From applications to developer tools.
+                What I&apos;ve been working on.
               </h2>
             </div>
 
             <div>
               <div className="max-w-3xl space-y-6 text-base leading-8 text-muted sm:text-lg">
+
                 <p>
-                  My projects reflect different areas of
-                  software development. Roundza explores
-                  interactive multiplayer experiences,
-                  while TTMotorSales represents practical
-                  business-oriented application development.
+                  I&apos;ve worked on a few different kinds of projects.
+                  Roundza is a party-game app, TTMotorSales is a website
+                  for buying and selling used vehicles, and React Simple
+                  Charts is a library for adding charts to React apps.
                 </p>
 
                 <p>
-                  I&apos;m also developing React Simple Charts,
-                  an open-source charting library that lets
-                  me explore component architecture,
-                  TypeScript API design, accessibility,
-                  and library development.
+                  They&apos;ve given me experience with different parts of
+                  development, from building interfaces to working on
+                  the systems behind them. I&apos;d like to bring that
+                  experience to a development team and continue learning
+                  from other developers.
                 </p>
 
-                <p>
-                  I&apos;m interested in opportunities to
-                  contribute to teams building useful web
-                  products, where I can apply my experience,
-                  collaborate with other developers, and
-                  continue growing professionally.
-                </p>
               </div>
 
               <Link
@@ -215,13 +207,13 @@ export default function AboutPage() {
             </p>
 
             <h2 className="mt-5 max-w-2xl text-3xl font-semibold tracking-tight sm:text-4xl">
-              Interested in working together?
+              Want to get in touch?
             </h2>
 
             <p className="mt-5 max-w-xl text-base leading-8 text-background/75">
-              I&apos;m always interested in conversations
-              about software development, new opportunities,
-              and interesting technical challenges.
+              If you&apos;d like to talk about a developer role, a
+              project, or something I&apos;ve built, feel free
+              to reach out.
             </p>
 
             <Link

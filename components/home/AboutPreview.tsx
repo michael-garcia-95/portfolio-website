@@ -20,28 +20,23 @@ export default function AboutPreview() {
               id="about-preview-title"
               className="mt-5 max-w-md text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl"
             >
-              Curious by nature. Developer by choice.
+              I learned by building things.
             </h2>
           </div>
 
           <div className="lg:pt-8">
             <div className="max-w-2xl space-y-6 text-base leading-8 text-muted sm:text-lg sm:leading-9">
               <p>
-                I&apos;m Michael, an independent software
-                developer based in Trinidad &amp; Tobago.
-                I&apos;ve spent more than eight years building
-                software with JavaScript and PHP, with a
-                more recent focus on React, Next.js,
-                and TypeScript.
+                I&apos;m Michael, a software developer based in Trinidad
+                &amp; Tobago. I&apos;ve been building websites and apps
+                independently for more than eight years, starting mainly
+                with JavaScript and PHP.
               </p>
 
               <p>
-                I enjoy working through the entire development
-                process, from understanding a problem and
-                designing a solution to implementing, testing,
-                and refining the finished experience.
-                My projects range from full-stack applications
-                to open-source developer tools.
+                These days, I also work with React, Next.js, and TypeScript.
+                I enjoy taking an idea, figuring out how to make it work,
+                and seeing it come together.
               </p>
             </div>
 
