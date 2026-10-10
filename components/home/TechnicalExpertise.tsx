@@ -73,12 +73,6 @@ export default function TechnicalExpertise() {
           >
             What I work with.
           </h2>
-
-          <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:text-lg">
-            I work on both the parts people see and the systems
-            behind them. These are some of the tools I use
-            across my projects.
-          </p>
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2">

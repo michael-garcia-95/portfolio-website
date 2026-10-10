@@ -27,11 +27,6 @@ export default function SelectedWork() {
           >
             Things I&apos;ve built.
           </h2>
-
-          <p className="mt-5 text-base leading-8 text-muted">
-            A selection of applications and developer tools
-            I&apos;ve designed and developed.
-          </p>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

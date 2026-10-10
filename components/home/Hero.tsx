@@ -32,9 +32,10 @@ export default function Hero() {
 
           {/* Introduction */}
           <p className="mt-8 max-w-2xl text-base leading-8 text-muted sm:mt-10 sm:text-lg sm:leading-9">
-            I'm Michael Garcia, an independent full-stack developer
-            building practical applications and open-source tools
-            with React, TypeScript, Next.js, PHP, and Laravel.
+            I&apos;m Michael Garcia, an independent software
+            developer. My projects include party games, a
+            vehicle classifieds website, and a charting
+            library for React.
           </p>
 
           {/* Actions */}
@@ -65,13 +66,9 @@ export default function Hero() {
           </div>
 
           {/* Supporting details */}
-          <div className="mt-16 flex flex-col gap-3 border-t border-border pt-6 sm:mt-20 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-16 border-t border-border pt-6 sm:mt-20">
             <p className="text-xs font-medium text-muted">
-              Based in Trinidad & Tobago
-            </p>
-
-            <p className="font-mono text-xs text-muted">
-              Applications / Developer Tools / Open Source
+              Based in Trinidad &amp; Tobago
             </p>
           </div>
         </div>

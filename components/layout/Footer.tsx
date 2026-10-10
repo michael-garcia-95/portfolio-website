@@ -30,10 +30,6 @@ export default function Footer() {
               Full-Stack Software Developer
             </p>
 
-            <p className="mt-3 max-w-sm text-sm leading-7 text-background/65">
-              Building modern applications and tools for the web.
-            </p>
-
             <p className="mt-4 text-xs text-background/55">
               Based in Trinidad & Tobago
             </p>
