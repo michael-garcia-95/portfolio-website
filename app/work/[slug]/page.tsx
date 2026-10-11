@@ -60,7 +60,7 @@ export default async function ProjectPage({
               {project.category}
             </p>
 
-            <h1 className="mt-4 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               {project.title}
             </h1>
 
@@ -75,9 +75,8 @@ export default async function ProjectPage({
         <Container>
           <ProjectCover
             project={project}
-            className="aspect-[16/9] min-h-56 rounded-2xl"
+            className="aspect-[16/9] rounded-2xl"
           />
-
           <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
             <div>
               <p className="text-xs font-medium text-muted">
