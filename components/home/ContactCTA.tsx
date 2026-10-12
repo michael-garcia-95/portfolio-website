@@ -8,7 +8,7 @@ export default function ContactCTA() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="scroll-mt-28 border-t border-border py-24 sm:py-28 lg:py-32"
+      className="scroll-mt-28 border-t border-border py-16 sm:py-20 lg:py-24"
     >
       <Container>
         <div className="rounded-2xl bg-surface px-6 py-12 sm:px-10 sm:py-16 lg:px-16 lg:py-20">

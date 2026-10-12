@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import ProjectCard from "@/components/ui/ProjectCard";
@@ -13,7 +12,7 @@ export default function SelectedWork() {
     <section
       id="work"
       aria-labelledby="selected-work-title"
-      className="scroll-mt-28 border-t border-border py-24 sm:py-28 lg:py-32"
+      className="scroll-mt-28 border-y border-border bg-surface/50 py-14 sm:py-16 lg:py-20"
     >
       <Container>
         <div className="max-w-2xl">
@@ -29,7 +28,7 @@ export default function SelectedWork() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
@@ -39,7 +38,7 @@ export default function SelectedWork() {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-7">
           <Link
             href="/work"
             className="inline-flex items-center gap-2 rounded-md text-sm font-semibold text-accent hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"

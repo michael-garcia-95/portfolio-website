@@ -53,13 +53,12 @@ const expertise = [
   },
 ];
 
-
 export default function TechnicalExpertise() {
   return (
     <section
       id="expertise"
       aria-labelledby="expertise-title"
-      className="scroll-mt-28 border-t border-border py-24 sm:py-28 lg:py-32"
+      className="scroll-mt-28 border-t border-border py-16 sm:py-20 lg:py-24"
     >
       <Container>
         <div className="max-w-3xl">
@@ -75,29 +74,31 @@ export default function TechnicalExpertise() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <div className="mt-10 grid gap-x-12 gap-y-9 md:grid-cols-2 lg:gap-x-16">
           {expertise.map((item) => (
             <article
               key={item.number}
-              className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 transition-colors duration-200 hover:border-accent/40 sm:p-8"
+              className="min-w-0 border-t border-border pt-6"
             >
-              <span className="font-mono text-xs font-medium text-accent">
-                {item.number}
-              </span>
+              <div className="flex items-baseline gap-4">
+                <span className="font-mono text-xs font-medium text-accent">
+                  {item.number}
+                </span>
 
-              <h3 className="mt-6 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
-                {item.title}
-              </h3>
+                <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                  {item.title}
+                </h3>
+              </div>
 
               <p className="mt-4 max-w-lg text-sm leading-7 text-muted sm:text-base">
                 {item.description}
               </p>
 
-              <div className="mt-auto flex flex-wrap gap-2 pt-8">
+              <div className="mt-5 flex flex-wrap gap-x-3 gap-y-2">
                 {item.technologies.map((technology) => (
                   <span
                     key={technology}
-                    className="rounded-md bg-surface px-3 py-1.5 text-xs font-medium text-foreground"
+                    className="text-xs font-medium text-accent"
                   >
                     {technology}
                   </span>

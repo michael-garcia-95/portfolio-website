@@ -7,7 +7,7 @@ export default function AboutPreview() {
     <section
       id="about"
       aria-labelledby="about-preview-title"
-      className="scroll-mt-28 border-t border-border bg-surface/40 py-24 sm:py-28 lg:py-32"
+      className="scroll-mt-28 border-t border-border bg-surface/40 py-16 sm:py-20 lg:py-24"
     >
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.4fr] lg:gap-20">

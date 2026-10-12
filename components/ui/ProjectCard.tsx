@@ -14,48 +14,65 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <article
-      className={`min-w-0 overflow-hidden rounded-2xl border border-border bg-white ${
-        prominent ? "lg:col-span-2" : ""
+      className={`min-w-0 overflow-hidden rounded-2xl border bg-white transition-shadow duration-200 hover:shadow-lg ${
+        prominent
+          ? "border-accent/30 border-t-4 border-t-accent lg:col-span-2"
+          : "border-border"
       }`}
     >
       <Link
         href={project.href}
-        className="group block h-full rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+        className={`group h-full rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
+          prominent
+            ? "block lg:grid lg:grid-cols-[0.9fr_1.1fr]"
+            : "block"
+        }`}
       >
         <ProjectCover
           project={project}
           className={
             prominent
-              ? "aspect-[16/8] min-h-56"
-              : "aspect-[16/10] min-h-52"
+              ? "aspect-[16/10] lg:order-2 lg:aspect-auto lg:h-full lg:min-h-[320px]"
+              : "aspect-[16/10]"
           }
         />
 
-        <div className="p-6 sm:p-8">
+        <div
+          className={
+            prominent
+              ? "flex min-w-0 flex-col justify-center bg-[#F2F7F4] p-6 sm:p-8 lg:order-1 lg:p-10"
+              : "min-w-0 p-6 sm:p-8"
+          }
+        >
+          {prominent && (
+            <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-widest text-accent">
+              Featured Project
+            </p>
+          )}
+
           <div className="mb-4 flex flex-wrap items-center gap-2 text-xs">
             <span className="font-medium text-accent">
               {project.category}
             </span>
+
             <span className="text-muted" aria-hidden="true">
               ·
             </span>
+
             <span className="text-muted">
               {project.status}
             </span>
           </div>
 
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="text-2xl font-semibold tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-3xl">
-              {project.title}
-            </h3>
-
-            <span
-              aria-hidden="true"
-              className="text-xl text-accent transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
-            >
-              ↗
-            </span>
-          </div>
+          <h3
+            className={`font-semibold tracking-tight text-foreground transition-colors group-hover:text-accent ${
+              prominent
+                ? "text-3xl leading-tight sm:text-4xl lg:text-[2.65rem]"
+                : "text-2xl sm:text-3xl"
+            }`}
+          >
+            {project.title}
+          </h3>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-muted sm:text-base">
             {project.description}
@@ -71,6 +88,22 @@ export default function ProjectCard({
               </span>
             ))}
           </div>
+
+          <span
+          className={`mt-7 inline-flex w-fit items-center gap-2 text-sm font-semibold transition-colors ${
+            prominent
+              ? "rounded-lg bg-accent px-4 py-3 text-accent-foreground group-hover:bg-foreground"
+              : "text-accent"
+          }`}
+          >
+            View project
+            <span
+              aria-hidden="true"
+              className="transition-transform group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </span>
         </div>
       </Link>
     </article>
