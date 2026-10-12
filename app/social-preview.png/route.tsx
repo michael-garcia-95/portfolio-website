@@ -42,18 +42,25 @@ export function GET() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
         <div
-          style={{
+        style={{
             display: "flex",
-            fontSize: 65,
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: 4,
+            fontSize: 60,
             fontWeight: 700,
             letterSpacing: -2,
             lineHeight: 1.15,
-          }}
+        }}
         >
-          Building modern applications
-          <br />
-          and tools for the web.
+        <div style={{ display: "flex" }}>
+            Building modern applications
         </div>
+        <div style={{ display: "flex" }}>
+            and tools for the web.
+        </div>
+        </div>
+
         <div style={{ fontSize: 28, color: "#52636A" }}>
           Full-Stack Software Developer
         </div>
