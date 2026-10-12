@@ -47,7 +47,7 @@ export default async function ProjectPage({
 
   return (
     <main>
-      <section className="pb-12 pt-40 sm:pt-48">
+      <section className="pb-8 pt-28 sm:pb-10 sm:pt-36">
         <Container>
           <Link
             href="/work"
@@ -56,7 +56,7 @@ export default async function ProjectPage({
             ← Back to work
           </Link>
 
-          <div className="mt-12 max-w-4xl">
+          <div className="mt-8 max-w-4xl sm:mt-10">
             <p className="text-sm font-medium text-accent">
               {project.category}
             </p>
@@ -65,9 +65,35 @@ export default async function ProjectPage({
               {project.title}
             </h1>
 
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted sm:text-xl sm:leading-9">
               {project.description}
             </p>
+
+            {(project.sourceUrl || project.liveUrl) && (
+              <div className="mt-7 flex flex-wrap gap-3">
+                {project.sourceUrl && (
+                  <a
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:bg-foreground"
+                  >
+                    View code ↗
+                  </a>
+                )}
+
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
+                  >
+                    Visit website ↗
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </Container>
       </section>
@@ -78,66 +104,43 @@ export default async function ProjectPage({
             project={project}
             className="aspect-[16/9] rounded-2xl"
           />
-          <div className="mt-8 grid gap-6 border-b border-border pb-8 sm:grid-cols-2">
-            <div>
-              <p className="text-xs font-medium text-muted">
-                My role
-              </p>
-              <p className="mt-2 text-sm font-medium text-foreground">
-                {project.role}
-              </p>
+          
+          <div className="mt-6 rounded-2xl border border-border bg-surface/40 p-5 sm:p-7">
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <p className="text-xs font-medium text-muted">
+                  My role
+                </p>
+                <p className="mt-2 text-sm font-medium text-foreground">
+                  {project.role}
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs font-medium text-muted">
+                  Status
+                </p>
+                <p className="mt-2 text-sm font-medium text-foreground">
+                  {project.status}
+                </p>
+              </div>
             </div>
 
-            <div>
-              <p className="text-xs font-medium text-muted">
-                Status
-              </p>
-              <p className="mt-2 text-sm font-medium text-foreground">
-                {project.status}
-              </p>
+            <div className="mt-6 flex flex-wrap gap-2 border-t border-border pt-5">
+              {project.technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="rounded-md bg-background px-3 py-2 text-xs font-medium text-foreground"
+                >
+                  {technology}
+                </span>
+              ))}
             </div>
           </div>
-
-          <div className="mt-8 flex flex-wrap gap-2">
-            {project.technologies.map((technology) => (
-              <span
-                key={technology}
-                className="rounded-md bg-surface px-3 py-2 text-xs font-medium text-foreground"
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-
-          {(project.sourceUrl || project.liveUrl) && (
-            <div className="mt-8 flex flex-wrap gap-3">
-              {project.sourceUrl && (
-                <a
-                  href={project.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center rounded-lg bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:bg-foreground"
-                >
-                  View code ↗
-                </a>
-              )}
-
-              {project.liveUrl && (
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-11 items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
-                >
-                  Visit website ↗
-                </a>
-              )}
-            </div>
-          )}
         </Container>
       </section>
 
-      <section className="border-t border-border py-16 sm:py-20">
+      <section className="border-t border-border bg-surface/30 py-14 sm:py-16">
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
             <div>
