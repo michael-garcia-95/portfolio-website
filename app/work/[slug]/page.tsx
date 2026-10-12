@@ -30,7 +30,8 @@ export async function generateMetadata({
 
   return createPageMetadata(
     `${project.title} | Michael Garcia`,
-    project.description
+    project.description,
+    project.href
   );
 }
 

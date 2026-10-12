@@ -19,7 +19,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = createPageMetadata(
   "Michael Garcia | Full-Stack Software Developer",
-  "Michael Garcia is an independent software developer building web applications, party games, and open-source React tools."
+  "Michael Garcia is an independent software developer building web applications, party games, and open-source React tools.",
+  "/"
 );
 
 export default function RootLayout({

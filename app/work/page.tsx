@@ -5,7 +5,8 @@ import { projects } from "@/data/projects";
 
 export const metadata = createPageMetadata(
   "Selected Work | Michael Garcia",
-  "Explore software projects by Michael Garcia, including Roundza, TTMotorSales, and React Simple Charts."
+  "Explore software projects by Michael Garcia, including Roundza, TTMotorSales, and React Simple Charts.",
+  "/work"
 );
 
 

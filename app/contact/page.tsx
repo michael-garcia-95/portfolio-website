@@ -4,7 +4,8 @@ import { contact } from "@/data/contact";
 
 export const metadata = createPageMetadata(
   "Contact Michael Garcia | Software Developer",
-  "Get in touch with Michael Garcia about developer roles, projects, or questions about his work."
+  "Get in touch with Michael Garcia about developer roles, projects, or questions about his work.",
+  "/contact"
 );
 
 const linkClass =
