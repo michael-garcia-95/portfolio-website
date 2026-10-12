@@ -18,6 +18,7 @@ export function createPageMetadata(
   pathname = "/"
 ): Metadata {
   const url = siteUrl(pathname);
+  const imageUrl = `${SITE_URL}/social-preview.png`;
 
   return {
     title,
@@ -31,9 +32,18 @@ export function createPageMetadata(
       title,
       description,
       url,
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: "Michael Garcia — Full-Stack Software Developer",
+          type: "image/png",
+        },
+      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
     },
