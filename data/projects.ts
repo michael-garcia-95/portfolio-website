@@ -11,6 +11,7 @@ export type Project = {
   featured: boolean;
   cover: "charts" | "games" | "marketplace";
   image?: string;
+  packageUrl?: string;
   sourceUrl?: string;
   liveUrl?: string;
   story: string[];
@@ -19,14 +20,15 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  
   {
     id: "react-simple-charts",
     title: "React Simple Charts",
     category: "Open-source library",
     description:
-      "A React charting library I'm building to make common charts easier to add and customize.",
+      "An open-source React and TypeScript charting library with five chart types, customizable components, and accessible interactions.",
     href: "/work/react-simple-charts",
-    status: "Preparing first release",
+    status: "v0.1.0 published on npm",
     role: "Creator & maintainer",
     technologies: [
       "React",
@@ -37,25 +39,31 @@ export const projects: Project[] = [
     featured: true,
     cover: "charts",
     image: "/images/projects/react-simple-charts.webp",
+  
     sourceUrl:
       "https://github.com/michael-garcia-95/react-simple-charts",
-
+    liveUrl:
+      "https://michael-garcia-95.github.io/react-simple-charts/",
+    packageUrl:
+      "https://www.npmjs.com/package/@michael-garcia-95/react-simple-charts",
+  
     story: [
-      "React Simple Charts is a small library I'm building for people who need charts in their React apps. It supports line, area, bar, pie, and donut charts.",
-
-      "A lot of the work has gone into making the components easy to use without limiting what developers can do with them. I've also spent time on accessibility, testing, and making sure the charts behave properly in different React setups.",
+      "I created React Simple Charts to make it easier to add common charts to React applications. The first public release, v0.1.0, includes line, area, bar, pie, and donut charts.",
+  
+      "A significant part of the work involved designing a flexible TypeScript API, supporting keyboard and screen-reader interactions, handling responsive layouts and server rendering, and testing compatibility across different React environments.",
     ],
-
+  
     highlights: [
-      "Five chart types with shared functionality.",
-      "TypeScript support and customizable components.",
-      "A playground for trying out charts.",
-      "Automated tests and documentation.",
+      "Published version 0.1.0 to npm under the MIT license.",
+      "Five chart types with customizable components.",
+      "Accessibility features, including keyboard navigation and data alternatives.",
+      "Automated testing and compatibility verification for React 18 and 19.",
     ],
-
+  
     note:
-      "The library is still in development. I'm working toward its first public release.",
+      "Version 0.1.0 is publicly available on npm. I'm continuing to develop and improve the library.",
   },
+  
 
   {
     id: "roundza",

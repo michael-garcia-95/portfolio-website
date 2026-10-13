@@ -69,7 +69,7 @@ export default async function ProjectPage({
               {project.description}
             </p>
 
-            {(project.sourceUrl || project.liveUrl) && (
+            {(project.sourceUrl || project.liveUrl || project.packageUrl) && (
               <div className="mt-7 flex flex-wrap gap-3">
                 {project.sourceUrl && (
                   <a
@@ -92,6 +92,18 @@ export default async function ProjectPage({
                     Visit website ↗
                   </a>
                 )}
+                
+                {project.packageUrl && (
+                  <a
+                    href={project.packageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center rounded-lg border border-border px-5 py-3 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
+                  >
+                    View on npm ↗
+                  </a>
+                )}
+
               </div>
             )}
           </div>
