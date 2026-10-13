@@ -36,7 +36,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     cover: "charts",
-    image: "/images/projects/react-simple-charts.png",
+    image: "/images/projects/react-simple-charts.webp",
     sourceUrl:
       "https://github.com/michael-garcia-95/react-simple-charts",
 
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     cover: "games",
-    image: "/images/projects/roundza.png",
+    image: "/images/projects/roundza.webp",
     liveUrl: "https://playroundza.com",
 
     story: [
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     ],
     featured: true,
     cover: "marketplace",
-    image: "/images/projects/ttmotorsales.png",
+    image: "/images/projects/ttmotorsales.webp",
     liveUrl: "https://ttmotorsales.com",
 
     story: [
