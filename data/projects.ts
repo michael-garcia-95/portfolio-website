@@ -65,14 +65,15 @@ export const projects: Project[] = [
   },
   
 
+  
   {
     id: "roundza",
     title: "Roundza",
     category: "Multiplayer party games",
     description:
-      "A collection of party games that friends can play together using their own phones.",
+      "A multiplayer party-game app built with Next.js and Supabase, where players use their own phones to join shared lobbies and play together.",
     href: "/work/roundza",
-    status: "In development",
+    status: "Playable web version · Full release in development",
     role: "Independent developer",
     technologies: [
       "Next.js",
@@ -84,32 +85,32 @@ export const projects: Project[] = [
     cover: "games",
     image: "/images/projects/roundza.webp",
     liveUrl: "https://playroundza.com",
-
+  
     story: [
-      "Roundza is a party-game app built around playing together. Players join a shared lobby on their own devices and choose from games like Charades, Imposter, Draw It, and Hot Seat.",
-
-      "I've been working on both the games themselves and the systems that make everything work together. That includes managing lobbies, handling game sessions, and building the account features needed for future paid content.",
+      "Roundza brings four party games together in one application: Charades, Imposter, Draw It, and Hot Seat. Players join a shared lobby from their own phones and can switch between games without setting everything up again.",
+  
+      "I've worked on the multiplayer lobby system, game rules, and session management that keep players connected throughout a game. The app supports guest play, and I'm developing account and content-access features for the first full release.",
     ],
-
+  
     highlights: [
-      "Four different party games.",
-      "Shared lobbies and multiplayer sessions.",
-      "Game rules and session management.",
-      "Account and content features for the full release.",
+      "Four party games with different rules and interactions.",
+      "Shared multiplayer lobbies and game-session management.",
+      "Guest play and account functionality.",
+      "Server-side game validation and content-access systems.",
     ],
-
+  
     note:
-      "A playable web version is available. I'm continuing to work on the first full release.",
+      "A playable web version is available at playroundza.com. Development continues on the first full production release.",
   },
-
+  
   {
     id: "ttmotorsales",
     title: "TTMotorSales",
     category: "Vehicle classifieds",
     description:
-      "A website for buying and selling used vehicles in Trinidad & Tobago.",
+      "A live vehicle classifieds website for Trinidad & Tobago, with features for browsing, advertising, and managing used-vehicle listings.",
     href: "/work/ttmotorsales",
-    status: "Live website",
+    status: "Live website · Laravel rebuild in progress",
     role: "Full-stack development & maintenance",
     technologies: [
       "PHP",
@@ -120,21 +121,22 @@ export const projects: Project[] = [
     cover: "marketplace",
     image: "/images/projects/ttmotorsales.webp",
     liveUrl: "https://ttmotorsales.com",
-
+  
     story: [
-      "TTMotorSales is a used-vehicle classifieds website for Trinidad & Tobago. People can browse vehicles for sale or create listings to advertise their own.",
-
-      "Alongside the existing website, I've been working on a Laravel rebuild. The aim is to make the application easier to maintain and improve how listings and administrative tasks are handled.",
+      "TTMotorSales is a vehicle classifieds website I built for Trinidad & Tobago. It allows people to browse used vehicles for sale and create listings to advertise their own vehicles.",
+  
+      "The existing website uses PHP and MySQL. I'm also working on a Laravel rebuild to modernize the application, improve maintainability, and develop better listing-management and administrative workflows.",
     ],
-
+  
     highlights: [
-      "Vehicle listings and browsing.",
-      "Features for buyers and sellers.",
-      "Listing management and administrative tools.",
-      "An ongoing rebuild using Laravel.",
+      "Used-vehicle listings and browsing.",
+      "Listing creation and management for sellers.",
+      "Administrative tools for managing website operations.",
+      "An ongoing modernization project using Laravel.",
     ],
-
+  
     note:
-      "The existing website remains live while development on the Laravel version continues.",
+      "The existing PHP/MySQL website remains live. The Laravel rebuild is a separate work in progress.",
   },
+  
 ];
