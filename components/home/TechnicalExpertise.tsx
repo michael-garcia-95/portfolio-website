@@ -1,12 +1,13 @@
 
 import Container from "@/components/ui/Container";
 
+
 const expertise = [
   {
     number: "01",
     title: "Frontend",
     description:
-      "I build the parts of an application that people see and use, from page layouts to buttons, forms, and interactions.",
+      "I build responsive interfaces and interactive application features using React, Next.js, JavaScript, and TypeScript.",
     technologies: [
       "JavaScript",
       "TypeScript",
@@ -19,7 +20,7 @@ const expertise = [
     number: "02",
     title: "Backend",
     description:
-      "I work on the code behind applications, including APIs, user accounts, and the logic that makes everything work.",
+      "I work on APIs, authentication, server-side validation, and application logic using PHP, Laravel, and JavaScript.",
     technologies: [
       "PHP",
       "Laravel",
@@ -31,7 +32,7 @@ const expertise = [
     number: "03",
     title: "Databases & Services",
     description:
-      "I use databases and backend services to store information and keep different parts of an application connected.",
+      "I use MySQL, PostgreSQL, and Supabase to manage application data, access controls, and backend functionality.",
     technologies: [
       "PostgreSQL",
       "MySQL",
@@ -42,7 +43,7 @@ const expertise = [
     number: "04",
     title: "Testing & Development",
     description:
-      "I use Git to manage changes, write tests to catch problems, and try to keep my code easy to understand and maintain.",
+      "I use Git, automated testing, browser checks, and accessibility testing to improve reliability and maintainability.",
     technologies: [
       "Git",
       "GitHub",

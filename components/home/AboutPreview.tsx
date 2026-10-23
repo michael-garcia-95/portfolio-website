@@ -27,16 +27,17 @@ export default function AboutPreview() {
           <div className="lg:pt-8">
             <div className="max-w-2xl space-y-6 text-base leading-8 text-muted sm:text-lg sm:leading-9">
               <p>
-                I&apos;m Michael, a software developer based in Trinidad
-                &amp; Tobago. I&apos;ve been building websites and apps
-                independently for more than eight years, starting mainly
-                with JavaScript and PHP.
+                I&apos;m a software developer based in Trinidad &amp; Tobago.
+                For more than eight years, I&apos;ve been building web software
+                independently, starting with JavaScript and PHP and gradually
+                taking on more complex projects.
               </p>
 
               <p>
-                These days, I also work with React, Next.js, and TypeScript.
-                I enjoy taking an idea, figuring out how to make it work,
-                and seeing it come together.
+                Today I work with React, Next.js, TypeScript, and backend
+                technologies. I enjoy solving practical problems,
+                understanding how different parts of an application fit
+                together, and building software that&apos;s easy to maintain.
               </p>
             </div>
 

@@ -165,18 +165,18 @@ export default function AboutPage() {
               <div className="max-w-3xl space-y-6 text-base leading-8 text-muted sm:text-lg">
 
                 <p>
-                  I&apos;ve worked on a few different kinds of projects.
-                  Roundza is a party-game app, TTMotorSales is a website
-                  for buying and selling used vehicles, and React Simple
-                  Charts is a library for adding charts to React apps.
+                  My projects include TTMotorSales, a live vehicle classifieds
+                  website; Roundza, a multiplayer party-game application;
+                  and React Simple Charts, an open-source library published
+                  to npm.
                 </p>
 
                 <p>
-                  They&apos;ve given me experience with different parts of
-                  development, from building interfaces to working on
-                  the systems behind them. I&apos;d like to bring that
-                  experience to a development team and continue learning
-                  from other developers.
+                  Working on these projects has given me experience across
+                  frontend development, backend systems, databases, testing,
+                  and maintenance. I&apos;m interested in bringing that
+                  experience to a development team, contributing to real
+                  products, and continuing to grow alongside other developers.
                 </p>
 
               </div>

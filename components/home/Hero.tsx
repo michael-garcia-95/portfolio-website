@@ -32,10 +32,10 @@ export default function Hero() {
 
           {/* Introduction */}
           <p className="mt-6 max-w-2xl text-base leading-8 text-muted sm:mt-7 sm:text-lg sm:leading-9">
-            I&apos;m Michael Garcia, an independent software
-            developer. My projects include party games, a
-            vehicle classifieds website, and a charting
-            library for React.
+            I&apos;m Michael Garcia, an independent full-stack developer
+            with over eight years of experience building websites and
+            applications. My work ranges from PHP and MySQL websites
+            to multiplayer apps and open-source React tools.
           </p>
 
           {/* Actions */}
