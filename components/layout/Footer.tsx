@@ -7,6 +7,7 @@ const navigation = [
   { label: "Work", href: "/work" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
+  { label: "Services", href: "/services" },
 ];
 
 export default function Footer() {
